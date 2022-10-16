@@ -1,0 +1,38 @@
+body{
+    padding: 0;
+    margin: 0;
+    font-size: 28px;
+  }
+  
+  .section{
+    position: relative;
+    padding: 50px 80px;
+    min-height: calc(100vh - 100px);
+    width: calc(100vw - 160px);
+    display: flex;
+    align-items: center;
+  }
+  .section__text{
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  
+  .section--01{
+    background-color: #e9ddcf;
+    position: absolute;
+    top: 37px;
+    left: -306px;
+  }
+  .section--02{
+    position: absolute;
+    top: 0;
+    left: 150px;
+    background-color: #e9ddcf;
+  }
+  .section--03{
+    position: absolute;
+    top: 50px;
+    left: 0;
+    background-color: transparent;
+  }
