@@ -1,0 +1,331 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+/* global variables */
+* , *:after , *:before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 16px;
+    line-height: 1.6em;
+    font-family: 'Poppins', sans-serif;
+    background: #e9ddcf;
+}
+
+:root{
+    --black: #444444;
+    --white: #fff;
+    --grey: #f5f5f5;
+    --poppins: 'Poppins', sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    line-height: 1.2;
+}
+a {
+    color: #1b3c72;
+    text-decoration: none;
+    transition: 0.5s;
+    cursor: pointer;
+  }
+
+.container-fluid{
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+.center{
+    text-align: center;
+}
+
+.flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.flex1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container{
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+section{
+    position: relative;
+    min-height: calc(100vh - 100px);
+    width: calc(100vw - 160px);
+    display: flex;
+    align-items: center;
+}
+
+/*--------------------------------------------------------------
+# Navbar
+--------------------------------------------------------------*/
+header{
+    padding-top: 20px;
+    background-color: var(--bg-color);
+}
+
+nav{
+    list-style-type: none;
+    padding: 20px 10px;
+    color: var(--black);
+    background-color: var(--grey);
+    z-index: 2;
+}
+
+nav li{
+    margin-left: 22px;
+    color: var(--white);
+}
+
+.nav-item.flex{
+    flex-direction: row;
+    margin-top: 30px;
+}
+/* Header  */
+/* hamb menu  */
+
+input#hamburger{
+    display: none;
+}
+label.nav-icon{
+    display: none;
+}
+
+nav li:hover{
+    text-decoration: underline;
+    color: var(--white);
+    transition: 0.1s linear;
+    cursor: pointer;
+    text-underline-offset: 8px;
+}
+nav li.active{
+    font-weight: bold;
+    text-decoration: underline;
+    color: var(--white);
+    text-underline-offset: 8px;
+}
+
+button.btn {
+    box-shadow: none;
+    border: 2px solid var(--white);
+    font-family: var(--poppins);
+    padding: 10px 28px;
+    background-color: transparent;
+    color: var(--white);
+    font-size: 17px;
+    border-radius: 6px;
+    text-transform: capitalize;
+    cursor: pointer;
+    z-index: 2;
+}
+
+@media screen and (max-width:767px){
+    body{
+        overflow-x: hidden;
+    }
+    header{
+        padding: 15px 12px;
+    }
+    section{
+        padding: 30px 35px;
+    }
+    label.nav-icon{
+        display: block;
+        color: var(--white);
+        z-index: 2;
+    }
+    nav{
+        display: block;
+        position: fixed;
+        background-color: #151515;
+        top: 36px;
+        height: 100vh;
+        right: -250px;
+        width: 250px;
+        transition: right .5s ease-in;
+        z-index: 2;
+    }
+    label .fa-remove{
+        display: none;
+    }
+    input#hamburger:checked ~ label .fa-remove{
+        display: block;
+    }
+    input#hamburger:checked ~ label .fa-bars{
+        display: none;
+    }
+    
+    input:checked ~ label ~ nav{
+        display: block;
+        right: 0;
+        background: #151515;
+    }
+    
+    .nav-item{
+        display: block;
+    }
+    
+    .nav-item.flex {
+        flex-direction: row;
+        margin-top: 23px !important;
+        padding-top: 30px;
+        visibility: visible; 
+    }
+    .flex1 {
+        flex-direction: row;
+    }
+    button.btn{
+        display: none;
+    }
+
+    .container{
+        padding: 0px;
+    }
+    .nav-item.flex{
+        flex-direction: row;
+        margin-top: 30px;
+    }
+}
+
+
+/* banner section  */
+.logo-title{
+    color: var(--white);
+    z-index: 2;
+    font-size: 25px;
+    font-weight: 900;
+}
+.banner{
+    background-image: url(empezarimgs/hero1.jpg);
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    margin-top: -174px;
+    padding-top: 120px;
+    padding-bottom: 50px;
+
+}
+/* .banner:before {
+    content: "";
+    position: absolute;
+    left: 0; 
+    right: 0;
+    top: 0; 
+    bottom: -17px;
+    background: rgba(0,0,0,.3);
+    z-index: 1;
+} */
+.banner .text{
+    position: absolute;
+    width: 50%;
+    padding: 30px 30px;
+    text-transform: uppercase;
+    line-height: 1.5;
+}
+h1.text{
+    color: var(--white);
+    font-size: 45px;
+    font-weight: 300;
+    left: 81px;
+}
+h4{
+    position: absolute;
+    left: 112px;
+    color: #fff;
+    font-weight: normal;
+    top: 320px;
+    bottom: 220px;
+}
+
+@media screen and (max-width:767px){
+    .banner .text{
+        width: 100%;
+        margin-top: 80px;
+    }
+    .banner{
+        height: 50vh;
+    }
+    h1.text{
+        font-size: 30px;
+    }
+    h4 {
+        position: absolute;
+        left: 10px;
+        color: #fff;
+        font-weight: normal;
+        top: 135px;
+    }
+    .banner .text {
+        position: absolute;
+        left: -20px;
+        text-transform: uppercase;
+        line-height: 1.5;
+        top: 50px;
+    }
+}
+
+
+/*--------------------------------------------------------------
+# Page 2 
+--------------------------------------------------------------*/
+section.business{
+    top: 0;
+    left: 0;
+}
+.box2{
+    background-image: url(empezarimgs/section2-2.png);
+    width: 40%;
+    height: 84vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    float: right;
+}
+h2{
+    font-size: 210px;
+    color: var(--black);
+    font-weight: 300;
+    justify-content: center;
+    align-items: center;
+    padding-top: 150px;
+    display: flex;
+    padding-left: 32px;
+}
+span{
+    color: var(--white);
+    z-index: 2;
+}
+
+.box1 img{
+    position: absolute;
+    width: 300px;
+    height: 200px;
+    left: -65px;
+    top: 200px;
+}
+.box3 img{
+    position: absolute;
+    width: 150px;
+    height: 134px;
+    left: 285px;
+    top: 332px;
+}
+.box4 img{
+    position: absolute;
+    width: 120px;
+    height: 150px;
+    left: 471px;
+    top: 120px;
+}
