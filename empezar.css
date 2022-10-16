@@ -80,7 +80,7 @@ nav{
     list-style-type: none;
     padding: 20px 10px;
     color: var(--black);
-    background-color: var(--grey);
+/*     background-color: var(--grey); */
     z-index: 2;
 }
 
